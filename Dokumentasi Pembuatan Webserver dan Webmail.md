@@ -52,8 +52,6 @@ Command : `nano /etc/bind/named.conf.options`.
             //=====================================================================$
             // If BIND logs error messages about the root key being expired,
 
-haloooo
-
 **5. Konfigurasi db**
 
 Terdapat 2 db yaitu fordward zone dan reserve zone
@@ -65,27 +63,26 @@ Kemudian edit isinya : `nano /etc/bind/db.tiga.tujuhlangit.id`
    
 Edit seperti ini:
 
-{
-; BIND data file for local loopback interface
-;
-$TTL    604800
-@       IN      SOA     tiga.tujuhlangit.id. root.tiga.tujuhlangit.id. (
-                              2         ; Serial
-                         604800         ; Refresh
-                          86400         ; Retry
-                        2419200         ; Expire
-                         604800 )       ; Negative Cache TTL
-;
-;name servers - NS records
-        IN      NS      ns1.tiga.tujuhlangit.id.
-;name servers - A record
-tiga.tujuhlangit.id.    IN      A       128.199.137.147
-;other
-tiga.tujuhlangit.id.            IN      A       128.199.137.147
-ns1             IN      A       128.199.137.147
-webmail         IN      A       128.199.137.147
-	@               IN      MX 10   tiga.tujuhlangit.id.
-}
+        ; BIND data file for local loopback interface
+        ;
+        $TTL    604800
+        @       IN      SOA     tiga.tujuhlangit.id. root.tiga.tujuhlangit.id. (
+                                    2         ; Serial
+                                604800         ; Refresh
+                                86400         ; Retry
+                                2419200         ; Expire
+                                604800 )       ; Negative Cache TTL
+        ;
+        ;name servers - NS records
+                IN      NS      ns1.tiga.tujuhlangit.id.
+        ;name servers - A record
+        tiga.tujuhlangit.id.    IN      A       128.199.137.147
+        ;other
+        tiga.tujuhlangit.id.            IN      A       128.199.137.147
+        ns1             IN      A       128.199.137.147
+        webmail         IN      A       128.199.137.147
+            @               IN      MX 10   tiga.tujuhlangit.id.
+
 
 **Reserve Zone**
 
@@ -94,20 +91,20 @@ Command : `cp /etc/bind/db.127 /etc/bind/db.137.199.in-addr.arpa`
 Kemudian edit isinya : `nano /etc/bind/db.137.199.128.in-addr.arpa`
 
 Edit seperti ini :
-{; BIND reverse data file for local loopback interface
-;
-$TTL    604800
-@       IN      SOA     tiga.tujuhlangit.id. root.tiga.tujuhlangit.id. (
-                              1         ; Serial
-                         604800         ; Refresh
-                          86400         ; Retry
-                        2419200         ; Expire
-                         604800 )       ; Negative Cache TTL
-;name server - NS records
-        IN      NS      ns1.tiga.tujuhlangit.id.
-;PTR Records
-137.147 IN      PTR     ns1.tiga.tujuhlangit.id.
-137.147 IN      PTR     webmail.tiga.tujuhlangit.id.}
+        ; BIND reverse data file for local loopback interface
+        ;
+        $TTL    604800
+        @       IN      SOA     tiga.tujuhlangit.id. root.tiga.tujuhlangit.id. (
+                                    1         ; Serial
+                                604800         ; Refresh
+                                86400         ; Retry
+                                2419200         ; Expire
+                                604800 )       ; Negative Cache TTL
+        ;name server - NS records
+                IN      NS      ns1.tiga.tujuhlangit.id.
+        ;PTR Records
+        137.147 IN      PTR     ns1.tiga.tujuhlangit.id.
+        137.147 IN      PTR     webmail.tiga.tujuhlangit.id.
 
 **6. Konfigurasi file resolv.conf**
 
