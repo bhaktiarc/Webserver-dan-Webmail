@@ -25,7 +25,7 @@ Buka wordpress.conf dengan command : `nano /etc/apache2/sites-available/wordpres
 
 Aplikasi web wordpress yang akan di install akan menggunakan databases wordpress yang dimana user ‘kelompok3’ mendapatkan akses penuh terhadap database wordpress
 
-**3. C.	Pengunduhan Wordpress dan konfigurasi wp-config.php**
+**3. Pengunduhan Wordpress dan konfigurasi wp-config.php**
 
 Langkah-langkah dan command yang digunakan :
 
@@ -53,12 +53,21 @@ perintah diatas untuk melakukan permission pada direktori /var/www/html/
 
 Konfigurasi pada file wp-config.php adalah mengisi informasi – informasi database agar aplikasi wordpress dapat terhubung ke dalam database , berikut ini adalah isi file wp-config.php 
 
-![Gambar]()
+![Gambar konfig wp-config](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/konfig%20wp-config.PNG)
 
 **5. Instalasi Wordpress**
-1. Mengakses domain melalui tiga.tujuhlangit.id/wp-admin/install.php
+
+1. Mengakses domain melalui `tiga.tujuhlangit.id/wp-admin/install.php`
+
+![Gambar install wordpress](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/install%20wordpress.PNG)
+
 2. Masukan informasi login sebagai admin wordpress  
+
+![Gambar install wordpress2](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/install%20wordpress2.PNG)
+
 3. Login sebagai admin wordpress
+   
+![Gambar login wordpress](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/login%20wordpress.PNG)
 
 **6. Instalasi SSL pada webserver**
 
@@ -66,14 +75,23 @@ SSL yang digunakan adalah letsencrypt sesuai dengan ketentuan pada soal
 
 1.	Instalasi paket 
 
-    - Certbort
-    - 
+- Certbort
+
 2.	Instalasi SSL 
 
-    Command : `certbot --apache -d tiga.tujuhlangit.id`
+Command : `certbot --apache -d tiga.tujuhlangit.id`
+
+![Gambar instalasi ssl](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/install%20ssl.PNG)
 
 
 ## Pengujian
+
+![Gambar pengujian1](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/pengujian1.PNG)
+
+![Gambar pengujian2](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/pengujian2.PNG)
+
+![Gambar pengujian3](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/pengujian3.PNG)
+
 
 
 
