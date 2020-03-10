@@ -27,6 +27,8 @@ Command : `nano /etc/bind/named.conf.local`.
             file "/etc/bind/db.137.199.128.in-addr.arpa";
         }; 
         
+![Gambar edit named conf local](https://github.com/bhaktiarc/projek-webserver/blob/master/img/conf%20named%20conf%20local.PNG)
+
 **4. Konfigurasi pada file name.conf.options**
 
 Command : `nano /etc/bind/named.conf.options`.
@@ -53,6 +55,8 @@ Command : `nano /etc/bind/named.conf.options`.
             };
             //=====================================================================$
             // If BIND logs error messages about the root key being expired,
+
+![Gambar edit named conf options](https://github.com/bhaktiarc/projek-webserver/blob/master/img/konf%20named%20conf%20options.PNG)
 
 **5. Konfigurasi db**
 
@@ -86,6 +90,7 @@ Edit seperti ini:
         webmail         IN      A       128.199.137.147
         @               IN      MX 10   tiga.tujuhlangit.id.
 
+![Gambar fordward zone](https://github.com/bhaktiarc/projek-webserver/blob/master/img/fordward%20zone.PNG)
 
 **Reserve Zone**
 
@@ -110,6 +115,8 @@ Edit seperti ini :
         137.147 IN      PTR     ns1.tiga.tujuhlangit.id.
         137.147 IN      PTR     webmail.tiga.tujuhlangit.id.
 
+![Gambar reserve zone](https://github.com/bhaktiarc/projek-webserver/blob/master/img/reserve%20zone.PNG)
+
 **6. Konfigurasi file resolv.conf**
 
 Command : `nano /etc/resolv.conf`.
@@ -118,7 +125,9 @@ Isinya :
     nameserver 128.199.137.147
     nameserver 67.207.67.2
     nameserver 67.207.67.3
-    
+
+![Gambar resolv conf](https://github.com/bhaktiarc/projek-webserver/blob/master/img/resolv%20conf.PNG)
+
 **7. Restart BIND9**
 
 Command : `service bind9 restart`.
@@ -127,8 +136,16 @@ Command : `service bind9 restart`.
 
 Command :
 1. `nslookup tiga.tujuhlangit.id`.
+
+![Gambar ns1](https://github.com/bhaktiarc/projek-webserver/blob/master/img/nslookup%20www.PNG)
+
 2. `nslookup 128.199.137.147`.
+
+![Gambar ns2](https://github.com/bhaktiarc/projek-webserver/blob/master/img/nslookup%20ip.PNG)
+
 3. `ping tiga.tujuhlangit.id`.
+
+![Gambar ping](https://github.com/bhaktiarc/projek-webserver/blob/master/img/ping%20www.PNG)
     
 
 
