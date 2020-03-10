@@ -8,7 +8,8 @@ Command : `apt-get install apache2`
     
 **2. Buat VirtualHost File**
 
-Untuk Webserver :
+**Untuk Webserver :**
+
 Kita copy konfigurasi default dan kita edit :
 
 Command : `cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/wordpress.conf`
@@ -29,7 +30,8 @@ Isinya seperti ini :
 
 ![Gambar webserver](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/apache%20wordpress.PNG)
 
-Untuk Webmail :
+**Untuk Webmail :**
+
 Kita copy konfigurasi default dan kita edit :
 
 Command : `cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/webmail.tiga.tujuhlangit.id.conf`
