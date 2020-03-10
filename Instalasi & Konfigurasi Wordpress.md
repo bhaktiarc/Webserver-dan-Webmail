@@ -11,7 +11,7 @@ Direktori yang digunakan `/var/www/html/`
 Lalu jalankan command berikut :
 
 1. `a2ensite wordpress.conf`
-2. `Service apache2 reload`
+2. `service apache2 reload`
 
 Buka wordpress.conf dengan command : `nano /etc/apache2/sites-available/wordpress.conf`
 
@@ -31,21 +31,21 @@ Langkah-langkah dan command yang digunakan :
 
 1.	`wget -c http://wordpress.org/latest.tar.gz`
 
-gunakan perintah wget untuk mengunduh file-file yang dibutuhkan oleh wordpress
+    gunakan perintah wget untuk mengunduh file-file yang dibutuhkan oleh wordpress
 
 2.	`tar -xzvf latest.tar.gz`
 
-perintah diatas untuk melakukan proses ekstrasi file wordpress
+    perintah diatas untuk melakukan proses ekstrasi file wordpress
 
 3.	`rsync -av wordpress/* /var/www/html/`
 
-printah diatas untuk menyalin seluruh file yang ada di direktori wordpress ke direktori document root virtualhost wordpress.conf 
+    perintah diatas untuk menyalin seluruh file yang ada di direktori wordpress ke direktori document root virtualhost wordpress.conf 
 
 4.	`chown -R www-data:www-data /var/www/html/`
 
 5.	`chmod -R 755 /var/www/html/`
 
-perintah diatas untuk melakukan permission pada direktori /var/www/html/
+    perintah diatas untuk melakukan permission pada direktori /var/www/html/
 
 6.	`mv wp-config-sample.php wp-config.php`
 
