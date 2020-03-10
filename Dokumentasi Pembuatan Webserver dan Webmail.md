@@ -48,7 +48,7 @@ Command : `nano /etc/bind/named.conf.options`.
             //=====================================================================$
             // If BIND logs error messages about the root key being expired,
 
-**5. Konfigurasi db.**
+**5. Konfigurasi db**
       
 **a. Fordward Zone**
    
@@ -71,10 +71,8 @@ $TTL    604800
 ;
 ;name servers - NS records
         IN      NS      ns1.tiga.tujuhlangit.id.
-
 ;name servers - A record
 tiga.tujuhlangit.id.    IN      A       128.199.137.147
-
 ;other
 tiga.tujuhlangit.id.            IN      A       128.199.137.147
 ns1             IN      A       128.199.137.147
