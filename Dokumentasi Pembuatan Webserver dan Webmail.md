@@ -55,6 +55,7 @@ Command : `nano /etc/bind/named.conf.options`.
 **5. Konfigurasi db**
 
 Terdapat 2 db yaitu fordward zone dan reserve zone
+
 **Fordward Zone**
    
 Copy dan edit file db.local : `cp /etc/bind/db.local /etc/bind/db.tiga.tujuhlangit.id`
@@ -81,7 +82,7 @@ Edit seperti ini:
         tiga.tujuhlangit.id.            IN      A       128.199.137.147
         ns1             IN      A       128.199.137.147
         webmail         IN      A       128.199.137.147
-            @               IN      MX 10   tiga.tujuhlangit.id.
+        @               IN      MX 10   tiga.tujuhlangit.id.
 
 
 **Reserve Zone**
@@ -91,6 +92,7 @@ Command : `cp /etc/bind/db.127 /etc/bind/db.137.199.in-addr.arpa`
 Kemudian edit isinya : `nano /etc/bind/db.137.199.128.in-addr.arpa`
 
 Edit seperti ini :
+
         ; BIND reverse data file for local loopback interface
         ;
         $TTL    604800
