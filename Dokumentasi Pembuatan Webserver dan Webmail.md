@@ -52,10 +52,12 @@ Command : `nano /etc/bind/named.conf.options`.
             //=====================================================================$
             // If BIND logs error messages about the root key being expired,
 
-**5. Konfigurasi db**
-Terdapat 2 db yaitu fordward zone dan reserve zone
+haloooo
 
-**a. Fordward Zone**
+**5. Konfigurasi db**
+
+Terdapat 2 db yaitu fordward zone dan reserve zone
+**Fordward Zone**
    
 Copy dan edit file db.local : `cp /etc/bind/db.local /etc/bind/db.tiga.tujuhlangit.id`
 
@@ -85,7 +87,7 @@ webmail         IN      A       128.199.137.147
 	@               IN      MX 10   tiga.tujuhlangit.id.
 }
 
-**b. Reserve Zone**
+**Reserve Zone**
 
 Command : `cp /etc/bind/db.127 /etc/bind/db.137.199.in-addr.arpa`
 
