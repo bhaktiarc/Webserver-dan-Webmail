@@ -4,12 +4,15 @@
 **BIND9 atau Berkeley Internet Name Domain Versi 9 adalah salah satu software yang biasa digunakan untuk membuat, membangun dan mengatur sebuah DNS (Domain Name Server) pada sistem operasi Linux.** 
 
 **1. Install BIND9**
+
 Command : `apt-get install bind9`.
 
 **2. Edit file pada named.conf**
+
 Command : `nano /etc/bind/named.conf`.
 
 **3. Konfigurasi pada file named.conf.local**
+
 Command : `nano /etc/bind/named.conf.local`.
         
         zone "tiga.tujuhlangit.id" {
@@ -23,6 +26,7 @@ Command : `nano /etc/bind/named.conf.local`.
         }; 
         
 **4. Konfigurasi pada file name.conf.options**
+
 Command : `nano /etc/bind/named.conf.options`.
   
       acl "trusted" {
@@ -58,7 +62,6 @@ Kemudian edit isinya : `nano /etc/bind/db.tiga.tujuhlangit.id`.
    
 Edit seperti ini:
 
-;
 ; BIND data file for local loopback interface
 ;
 $TTL    604800
@@ -103,14 +106,16 @@ $TTL    604800
 
 
 **6. Konfigurasi file resolv.conf**
+
 Command : `nano /etc/resolv.conf`.
 
 Isinya :
-nameserver 128.199.137.147
-nameserver 67.207.67.2
-nameserver 67.207.67.3
+    nameserver 128.199.137.147
+    nameserver 67.207.67.2
+    nameserver 67.207.67.3
     
 **7. Restart BIND9**
+
 Command : `service bind9 restart`.
 
 **8. Cek dengan nslookup dan ping ke domain**
