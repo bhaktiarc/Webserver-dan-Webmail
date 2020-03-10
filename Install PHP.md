@@ -4,7 +4,7 @@
 
 Command : `apt-get install php libapache2-mod-php php-mcrypt php-mysql`
 
-![Gambar install PHP](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/index.php)
+![Gambar install PHP](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/instal%20php.PNG)
 
 **2. Edit File dir.conf**
 
