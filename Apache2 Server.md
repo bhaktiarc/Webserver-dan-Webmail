@@ -26,7 +26,9 @@ Isinya seperti ini :
             ErrorLog ${APACHE_LOG_DIR}/error.log
             CustomLog ${APACHE_LOG_DIR}/access.log combined
       </VirtualHost>
-  
+
+![Gambar webserver](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/apache%20wordpress.PNG)
+
 Untuk Webmail :
 Kita copy konfigurasi default dan kita edit :
 
@@ -43,7 +45,9 @@ Command : `nano /etc/apache2/sites-available/webmail.tiga.tujuhlangit.id.conf`
             ErrorLog ${APACHE_LOG_DIR}/error.log
             CustomLog ${APACHE_LOG_DIR}/access.log combined
       </VirtualHost>
-  
+
+![Gambar webmail](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/apache%20webmail.PNG)
+
 **3. Enable Virtual dan Restart Apache2**
    
 Enable :
@@ -51,6 +55,8 @@ Enable :
 Command : `a2ensite wordpress.conf`
 
 Command : `a2ensite webmail.tiga.tujuhlangit.id`
+
+![Gambar enable](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/enable%20virtual.PNG)
    
 Restart :
 
@@ -73,6 +79,8 @@ Isinya :
       ff02::1 ip6-allnodes
       ff02::2 ip6-allrouters
       ff02::3 ip6-allhosts
+
+![Gambar local host file](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/Konf%20Local%20Hosts.PNG)
 
 
 
