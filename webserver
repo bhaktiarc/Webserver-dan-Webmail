@@ -1,0 +1,6 @@
+Dokumentasi projek akhir mata kuliah Administrasi Sistem Server dengan membuat webserver sederhana menggunakan VPS
+
+Instalasi dan Konfigurasi BIND9
+
+A.	Instalasi
+BIND9 atau Berkeley Internet Name Domain Versi 9 adalah salah satu software yang biasa digunakan untuk membuat, membangun dan mengatur sebuah DNS (Domain Name Server) pada sistem operasi Linux.
