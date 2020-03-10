@@ -2,9 +2,10 @@
 
 ## Projek Mata Kuliah Administrasi Sistem Server
 
-
 Projek ini menggunakan VPS yang didapatkan dari dosen dengan alamat IP 128.199.137.147 dengan domain tiga.tujuhlangit.id
+
 Menggunakan SSH client untuk dapat terhubung dengan VPS
+
 Projek ini dikerjakan sekitar bulan Desember 2017 - Januari 2018
 
 Alur dari pengerjaan adalah:
