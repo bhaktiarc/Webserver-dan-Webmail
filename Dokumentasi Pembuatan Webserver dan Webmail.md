@@ -97,10 +97,7 @@ $TTL    604800
                          604800 )       ; Negative Cache TTL
 ;name server - NS records
         IN      NS      ns1.tiga.tujuhlangit.id.
-
-
 ;PTR Records
-
 137.147 IN      PTR     ns1.tiga.tujuhlangit.id.
 137.147 IN      PTR     webmail.tiga.tujuhlangit.id.
 
@@ -109,14 +106,15 @@ $TTL    604800
 Command : `nano /etc/resolv.conf`.
 
 Isinya :
-    nameserver 128.199.137.147
-    nameserver 67.207.67.2
-    nameserver 67.207.67.3
+nameserver 128.199.137.147
+nameserver 67.207.67.2
+nameserver 67.207.67.3
     
 **7. Restart BIND9**
 Command : `service bind9 restart`.
 
 **8. Cek dengan nslookup dan ping ke domain**
+
 Command :
 1. `nslookup tiga.tujuhlangit.id`.
 2. `nslookup 128.199.137.147`.
