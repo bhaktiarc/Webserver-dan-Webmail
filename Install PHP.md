@@ -28,4 +28,6 @@ Command : `mysql -u root -p`
 
 Password yang digunakan adalah: Kelompok3
 
+Untuk lebih jelas lihat pada gambar
+
 ![Gambar buat database](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/buat%20database%20mysql.PNG)
