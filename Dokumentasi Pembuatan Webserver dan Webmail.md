@@ -11,6 +11,8 @@ Command : `apt-get install bind9`.
 
 Command : `nano /etc/bind/named.conf`.
 
+!(https://github.com/bhaktiarc/projek-webserver/blob/master/img/Edit%20file%20pada%20named%20conf.PNG)
+
 **3. Konfigurasi pada file named.conf.local**
 
 Command : `nano /etc/bind/named.conf.local`.
