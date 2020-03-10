@@ -62,6 +62,10 @@ Kemudian edit isinya : `nano /etc/bind/db.tiga.tujuhlangit.id`.
    
 Edit seperti ini:
 
+afdhgjhkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+ashfjjjjjjjjjjjjjjjjjjjjffff
+asjdkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+
 ; BIND data file for local loopback interface
 ;
 $TTL    604800
