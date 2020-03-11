@@ -21,11 +21,11 @@
 
 Konfigurasi hostname adalah menambahkan fully qualified domain name (FQDN) agar dapat diakses, untuk melakukan konfigurasi dapat dilakukan pada file `/etc/host`
 
-![Gambar]()
+![Gambar1](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/hostname1.PNG)
 
 Kemudian lakukan reboot pada system dengan syntax `systemctl reboot` dan lakukan pengecekan terhadap hostname dengan syntax: `hostname --fqdn`
 
-![Gambar]()
+![Gambar2](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/hostname2.PNG)
 
 ### C. Konfigurasi POSTFIX
 
@@ -47,17 +47,17 @@ Penggunaan MYSQL-SERVER disini adalah menjadi acuan dari mail server untuk melak
 
 File ini dibuat agar dalam melakukan konfigurasi lebih efisien, file tersebut akan berisi informasi-informasi login agar dapat masuk kedalam console mysql, file yang dibuat dengan nama `.my.cnf` dan isi file tersebut adalah sebagi berikut :
 
-![Gambar]()
+![Gambar3](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/login%20otomatis.PNG)
 
 Sehingga ketika mengetikan syntax `mysql` akan langsung masuk ke dalam console mysql
 
-![Gambar]()
+![Gambar4](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/login%20otomatis2.PNG)
 
 **2. Membuat database**
 
 Disini kami membuat 1 database yaitu postfix dan 3 tabel yaitu domain , alias, dan user 
 
-![Gambar]()
+![Gambar5](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/database.PNG)
 
 Tahap selanjutnya kami lakukan pembuatan user dengan nama kelompok3 dan membuat user tersebut mendapatkan akses penuh terhadap database postfix, perintah dapat di lakukan dengan syntax :
 
@@ -75,24 +75,24 @@ Dalam tahap ini terdapat di file yang dikonfigurasi terdapat pada direktori `/et
 
 konfigurasi pada baris 20 – 25
 
-![Gambar]()
+![Gambar6]()
 
 Konfigurasi diatas adalah membuat postfix menggunakan tls beserta cache dari postfix
 
 Konfigurasi pada baris 25 
 
-![Gambar]()
+![Gambar7]()
 
 Variable ini berfungsi untuk menambahkan domain dari tujuan email address
 Konfigurasi pada bari 67
 
-![Gambar]()
+![Gambar8]()
 
 Konfigurasi ini adalah agar postfix menggunakan dovecot LMTP
 
 Konfigurasi pada baris 68 – 73
 
-![Gambar]()
+![Gambar9]()
 
 Konfigurasi ini adalah konfigurasi protocol keamanan yang digunakan oleh postfix dimana mail server kita hanya akan menggunakan TLS dan tidak menggunakan SSLv2 dan SSLv3 yang keamananya sangat tidak kuat 
 
@@ -100,7 +100,7 @@ Konfigurasi ini adalah konfigurasi protocol keamanan yang digunakan oleh postfix
 
 pada file master.cf konfigurasi awal adalah menghilangkan tanda “#” pada baris 12, 17 – 21 ,25 – 27
 
-![Gambar]()
+![Gambar10]()
 
 **4. Menghubungkan postfix dan mysql-server dengan file map**
 
@@ -125,7 +125,7 @@ jalankan satu-satu:
 
 File ini berfungsi untuk mendapatkan domain email server yang ada di server, misalnya terdapat satu server tetapi akan menjalankan 2 domain email server dapat di lakukan pada table domain dan file ini yang akan menjadi sumber data dari postfix 
 
-![Gambar]()
+![Gambar11]()
 
 **4.2. mysql-virtual-mailbox-maps.cf**
 
@@ -133,19 +133,19 @@ file ini berfungsi untuk sumber data agar postfix dapat membuat direktori penyim
 
 dir-nya: `/var/vmail/vhosts/tiga.tujuhlangit.id>/kelompok3`
 
-![Gambar]()
+![Gambar12]()
 
 **4.3. mysql-virtual-alias-maps.cf**
 
 File ini berfungsi sebagai sumber data postfix untuk membuat sebuah postmaster dari mail server misalnya terdapat email info@tiga.tujuhlangit.id yang berfungsi sebagai email perusahaan kemudian email tersebut akan di forward ke email `kelompok3@tiga.tujuhlangit.id `, file ini juga dapat berfungsi sebagai anti spam yang dapat dilihat secara langsung atau dapat di filter secara manual tanpa menggunakan tambahan software, walaupun kurang efisien terhadap waktu tetapi akurat dalam melakukan filter terhadap email spam
 
-![Gambar]()
+![Gambar13]()
 
 **4.4. mysql-virtual-alias-maps-self.cf**
 
 File ini menjadi sumber data dari postfix untuk melakukan mapping terhadap email client yang mengirimkan email ke emailnya sendiri, hal ini dilakukan akan client mail server dapat melihat lagi email yang dikirimnya pada folder sentmail atau lainya sebagainya yang berfungsi sebagai laporan email keluar 
 
-![Gambar]()
+![Gambar14]()
 
 **5. Konfigurasi Dovecot**
 
@@ -168,25 +168,25 @@ Terdapat tiga file yang akan di konfigurasi terdapat pada file `/etc/dovecot/` y
 
     **5.2.1. 10-auth.conf**
 
-    ![Gambar]()
+    ![Gambar15]()
 
     **5.2.2. dovecot-sql.conf.ext**
 
-    ![Gambar]()
+    ![Gambar16]()
 
     **5.2.3.  99-mail-stack-delivery.conf**
 
     File ini berisi bagaimana komunikasi keluar dan masuknya email yaitu port, protocol, keamanan, dan letak direktori dari email dari mail server itu sendiri, di bawah ini adalah konfigurasi protocol pop3 imap dan lokasi email 
 
-    ![Gambar]()
+    ![Gambar17]()
 
     Konfigurasi di bawah ini adalah memberitahukan dovecot agar menerima dari service apa dan siapa user yang menjalankanya
 
-    ![Gambar]()
+    ![Gambar18]()
 
     Konfigurasi dibawah ini adalah memberituhukan dovecot agar menjalankan imap dan pop3 pada port tertentu 
 
-    ![Gambar]() 
+    ![Gambar19]() 
 
 
 **6. Uji konfigurasi mail server**
@@ -200,13 +200,13 @@ Kami melakukan uji coba mail server dengan kedua software yang telah di konfigur
 
     Apabila dilihat dari log file di bawah terterjadi error terhadap konfigurasi POSTFIX
 
-    ![Gambar]()
+    ![Gambar20]()
 
     **6.2.	DOVECOT**
 
     Apabila dilihat dari log diibawah ini tidak terjadi permasalahan pada konfigurasi dovecot
 
-    ![Gambar]()
+    ![Gambar21]()
 
 
 ### Instalasi Roundcube
@@ -219,11 +219,11 @@ Pada tahap instalasi roundcube kami memilih beberapa opsi sebagai berikut :
 
 Secara otomatis roundcube akan melakukan konfigurasi database di mysql server
 
-![Gambar]()
+![Gambar22]()
 
-![Gambar]()
+![Gambar23]()
 
-![Gambar]()
+![Gambar24]()
 
 **1. Konfigurasi Roundcube**
 
@@ -231,7 +231,7 @@ File konfigurasi Roundcube dapat diakses pada direktori  `/etc/roundcube/ config
 
 File ini akan berisi informasi-informasi database dan smtp server
 
-![Gambar]()
+![Gambar25]()
 
 **2.	Konfigurasi VirtualHost**
 
@@ -239,7 +239,7 @@ File konfigurasi Roundcube dapat diakses pada direktori `/etc/apache2/conf-avail
 
 File ini berfungsi sebagai konfigurasi web server agar mengakses roundcube dan konfigurasi SSL 
 
-![Gambar]()
+![Gambar26]()
 
 **3.	Menambahkan fitur pendaftaran pada roundcube**
 
@@ -256,9 +256,9 @@ Syntax: `sudo certbort --apache`
 
 Kemudian ikuti apa yang diminta 
 
-![Gambar]()
+![Gambar27]()
 
-![Gambar]()
+![Gambar28]()
 
 Menambahkan syntax pada file `roundcube.conf`
 
@@ -335,7 +335,7 @@ Edit seperti dibawah ini:
 
             <Directory /var/lib/roundcube/logs>
 
-![Gambar]()
+![Gambar29]()
 
 ## Hasil Akhir Webserver dan Webmail
 
@@ -343,39 +343,39 @@ Edit seperti dibawah ini:
 
 Kami melakukan beberapa modifikasi pada konfigurasi default wordpress dan php sehingga bisa menggunakan tema / upload tema selain yang disediakan oleh wordpress. Kemudian kami juga melakukan modofikasi pada tampilan sehingga menjadi sedemikian rupa.
 
-![Gambar]()
+![Gambar30]()
 
 **2.	Webmail 	: www.webmail.tiga.tujuhlangit.id**
 
 Kami melakukan modifikasi pada interface webmail sehingga menjadi ada fitur daftar untuk membuat akun email. 
 
-![Gambar]()
+![Gambar31]()
 
 ### Testing daftar webmail
 
-![Gambar]()
+![Gambar32]()
 
 Email address : `bhaktiarc@tiga.tujuhlangit.id`
 
 Password	: Kelompok3
 
-![Gambar]()
+![Gambar33]()
 
-![Gambar]()
+![Gambar34]()
 
 Login dengan akun yang telah dibuat
 
-![Gambar]()
+![Gambar35]()
 
 **Testing mengirim email dan menerima email**
 
-![Gambar]()
+![Gambar36]()
 
-![Gambar]()
+![Gambar37]()
 
 Mengecek pada email tujuan
 
-![Gambar]()
+![Gambar38]()
 
 
 
