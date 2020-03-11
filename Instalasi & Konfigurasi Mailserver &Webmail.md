@@ -129,7 +129,7 @@ File ini berfungsi untuk mendapatkan domain email server yang ada di server, mis
 
 **4.2. mysql-virtual-mailbox-maps.cf**
 
-file ini berfungsi untuk sumber data agar postfix dapat membuat direktori penyimpanan email terhadap user beserta domainya di dalam server, misalnya terdapat user dengan nama email address kelompok3@tiga.tujuhlangit.id maka akan direktori emailnya akan tersimpan pada direktori :
+file ini berfungsi untuk sumber data agar postfix dapat membuat direktori penyimpanan email terhadap user beserta domainya di dalam server, misalnya terdapat user dengan nama email address `kelompok3@tiga.tujuhlangit.id` maka akan direktori emailnya akan tersimpan pada direktori :
 
 dir-nya: `/var/vmail/vhosts/tiga.tujuhlangit.id>/kelompok3`
 
@@ -137,7 +137,7 @@ dir-nya: `/var/vmail/vhosts/tiga.tujuhlangit.id>/kelompok3`
 
 **4.3. mysql-virtual-alias-maps.cf**
 
-File ini berfungsi sebagai sumber data postfix untuk membuat sebuah postmaster dari mail server misalnya terdapat email info@tiga.tujuhlangit.id yang berfungsi sebagai email perusahaan kemudian email tersebut akan di forward ke email `kelompok3@tiga.tujuhlangit.id `, file ini juga dapat berfungsi sebagai anti spam yang dapat dilihat secara langsung atau dapat di filter secara manual tanpa menggunakan tambahan software, walaupun kurang efisien terhadap waktu tetapi akurat dalam melakukan filter terhadap email spam
+File ini berfungsi sebagai sumber data postfix untuk membuat sebuah postmaster dari mail server misalnya terdapat email `info@tiga.tujuhlangit.id` yang berfungsi sebagai email perusahaan kemudian email tersebut akan di forward ke email `kelompok3@tiga.tujuhlangit.id `, file ini juga dapat berfungsi sebagai anti spam yang dapat dilihat secara langsung atau dapat di filter secara manual tanpa menggunakan tambahan software, walaupun kurang efisien terhadap waktu tetapi akurat dalam melakukan filter terhadap email spam
 
 ![Gambar13](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/mysql-virtual-alias-mapscf.PNG)
 
@@ -376,6 +376,11 @@ Login dengan akun yang telah dibuat
 Mengecek pada email tujuan
 
 ![Gambar38](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/hasil9.PNG)
+
+
+### Webserver dan Webmail telah tidak exist dikarenakan VPS hanya aktif satu bulan sejak dibuat
+## TERIMAKASIH
+
 
 
 
