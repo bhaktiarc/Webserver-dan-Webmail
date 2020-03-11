@@ -378,7 +378,7 @@ Mengecek pada email tujuan
 ![Gambar38](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/hasil9.PNG)
 
 
-### Webserver dan Webmail telah tidak exist dikarenakan VPS hanya aktif satu bulan sejak dibuat
+### Webserver dan Webmail telah tidak tersedia dikarenakan VPS hanya aktif satu bulan sejak dibuat
 ## TERIMAKASIH
 
 
