@@ -18,6 +18,7 @@ Alur dari pengerjaan adalah:
 
 Jika terdapat kesalahan ataupun kekurangan bisa melakukan `pull request`
 
-### Terimakasih
+### Webmail dan Webserver sudah tidak tersedia dikarenakan hanya aktif 1 bulan semenjak dibuat
+## Terimakasih
 
 
