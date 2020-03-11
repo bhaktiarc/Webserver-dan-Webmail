@@ -14,7 +14,7 @@ Alur dari pengerjaan adalah:
 2. [Instalasi dan konfigurasi Apache2](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/Apache2%20Server.md)
 3. [Instalasi dan konfigurasi PHP dan MySQL](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/Install%20PHP.md)
 4. [Instalasi dan konfigurasi Wordpress](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/Instalasi%20%26%20Konfigurasi%20Wordpress.md)
-5. [Instalasi dan Konfirgurasi Mailserver dan Webmail]()
+5. [Instalasi dan Konfirgurasi Mailserver dan Webmail](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/Instalasi%20%26%20Konfigurasi%20Mailserver%20%26%20Webmail.md)
 
 Jika terdapat kesalahan ataupun kekurangan bisa melakukan `pull request`
 
