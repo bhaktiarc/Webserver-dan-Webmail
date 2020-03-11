@@ -75,24 +75,24 @@ Dalam tahap ini terdapat di file yang dikonfigurasi terdapat pada direktori `/et
 
 konfigurasi pada baris 20 – 25
 
-![Gambar6]()
+![Gambar6](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/maincf1.PNG)
 
 Konfigurasi diatas adalah membuat postfix menggunakan tls beserta cache dari postfix
 
 Konfigurasi pada baris 25 
 
-![Gambar7]()
+![Gambar7](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/maincf2.PNG)
 
 Variable ini berfungsi untuk menambahkan domain dari tujuan email address
 Konfigurasi pada bari 67
 
-![Gambar8]()
+![Gambar8](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/maincf3.PNG)
 
 Konfigurasi ini adalah agar postfix menggunakan dovecot LMTP
 
 Konfigurasi pada baris 68 – 73
 
-![Gambar9]()
+![Gambar9](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/maincf4.PNG)
 
 Konfigurasi ini adalah konfigurasi protocol keamanan yang digunakan oleh postfix dimana mail server kita hanya akan menggunakan TLS dan tidak menggunakan SSLv2 dan SSLv3 yang keamananya sangat tidak kuat 
 
@@ -100,7 +100,7 @@ Konfigurasi ini adalah konfigurasi protocol keamanan yang digunakan oleh postfix
 
 pada file master.cf konfigurasi awal adalah menghilangkan tanda “#” pada baris 12, 17 – 21 ,25 – 27
 
-![Gambar10]()
+![Gambar10](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/mastercf1.PNG)
 
 **4. Menghubungkan postfix dan mysql-server dengan file map**
 
@@ -125,7 +125,7 @@ jalankan satu-satu:
 
 File ini berfungsi untuk mendapatkan domain email server yang ada di server, misalnya terdapat satu server tetapi akan menjalankan 2 domain email server dapat di lakukan pada table domain dan file ini yang akan menjadi sumber data dari postfix 
 
-![Gambar11]()
+![Gambar11](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/mysql-virtual-mailbox-domainscf.PNG)
 
 **4.2. mysql-virtual-mailbox-maps.cf**
 
@@ -133,19 +133,19 @@ file ini berfungsi untuk sumber data agar postfix dapat membuat direktori penyim
 
 dir-nya: `/var/vmail/vhosts/tiga.tujuhlangit.id>/kelompok3`
 
-![Gambar12]()
+![Gambar12](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/mysql-virtual-mailbox-mapsvf.PNG)
 
 **4.3. mysql-virtual-alias-maps.cf**
 
 File ini berfungsi sebagai sumber data postfix untuk membuat sebuah postmaster dari mail server misalnya terdapat email info@tiga.tujuhlangit.id yang berfungsi sebagai email perusahaan kemudian email tersebut akan di forward ke email `kelompok3@tiga.tujuhlangit.id `, file ini juga dapat berfungsi sebagai anti spam yang dapat dilihat secara langsung atau dapat di filter secara manual tanpa menggunakan tambahan software, walaupun kurang efisien terhadap waktu tetapi akurat dalam melakukan filter terhadap email spam
 
-![Gambar13]()
+![Gambar13](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/mysql-virtual-alias-mapscf.PNG)
 
 **4.4. mysql-virtual-alias-maps-self.cf**
 
 File ini menjadi sumber data dari postfix untuk melakukan mapping terhadap email client yang mengirimkan email ke emailnya sendiri, hal ini dilakukan akan client mail server dapat melihat lagi email yang dikirimnya pada folder sentmail atau lainya sebagainya yang berfungsi sebagai laporan email keluar 
 
-![Gambar14]()
+![Gambar14](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/mysql-virtual-alias-maps-selfcf.PNG)
 
 **5. Konfigurasi Dovecot**
 
@@ -168,25 +168,25 @@ Terdapat tiga file yang akan di konfigurasi terdapat pada file `/etc/dovecot/` y
 
     **5.2.1. 10-auth.conf**
 
-    ![Gambar15]()
+    ![Gambar15](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/dovecot1.PNG)
 
     **5.2.2. dovecot-sql.conf.ext**
 
-    ![Gambar16]()
+    ![Gambar16](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/dovecot2.PNG)
 
     **5.2.3.  99-mail-stack-delivery.conf**
 
     File ini berisi bagaimana komunikasi keluar dan masuknya email yaitu port, protocol, keamanan, dan letak direktori dari email dari mail server itu sendiri, di bawah ini adalah konfigurasi protocol pop3 imap dan lokasi email 
 
-    ![Gambar17]()
+    ![Gambar17](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/dovecot3.PNG)
 
     Konfigurasi di bawah ini adalah memberitahukan dovecot agar menerima dari service apa dan siapa user yang menjalankanya
 
-    ![Gambar18]()
+    ![Gambar18](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/dovecot4.PNG)
 
     Konfigurasi dibawah ini adalah memberituhukan dovecot agar menjalankan imap dan pop3 pada port tertentu 
 
-    ![Gambar19]() 
+    ![Gambar19](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/dovecot5.PNG) 
 
 
 **6. Uji konfigurasi mail server**
@@ -200,13 +200,13 @@ Kami melakukan uji coba mail server dengan kedua software yang telah di konfigur
 
     Apabila dilihat dari log file di bawah terterjadi error terhadap konfigurasi POSTFIX
 
-    ![Gambar20]()
+    ![Gambar20](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/uji%20postfix.PNG)
 
     **6.2.	DOVECOT**
 
     Apabila dilihat dari log diibawah ini tidak terjadi permasalahan pada konfigurasi dovecot
 
-    ![Gambar21]()
+    ![Gambar21](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/uji%20dovecot.PNG)
 
 
 ### Instalasi Roundcube
@@ -219,11 +219,11 @@ Pada tahap instalasi roundcube kami memilih beberapa opsi sebagai berikut :
 
 Secara otomatis roundcube akan melakukan konfigurasi database di mysql server
 
-![Gambar22]()
+![Gambar22](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/rooundcube1.PNG)
 
-![Gambar23]()
+![Gambar23](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/roundcube2.PNG)
 
-![Gambar24]()
+![Gambar24](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/roundcube3.PNG)
 
 **1. Konfigurasi Roundcube**
 
@@ -231,7 +231,7 @@ File konfigurasi Roundcube dapat diakses pada direktori  `/etc/roundcube/ config
 
 File ini akan berisi informasi-informasi database dan smtp server
 
-![Gambar25]()
+![Gambar25](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/roundcube4.PNG)
 
 **2.	Konfigurasi VirtualHost**
 
@@ -239,7 +239,7 @@ File konfigurasi Roundcube dapat diakses pada direktori `/etc/apache2/conf-avail
 
 File ini berfungsi sebagai konfigurasi web server agar mengakses roundcube dan konfigurasi SSL 
 
-![Gambar26]()
+![Gambar26](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/roundcube5.PNG)
 
 **3.	Menambahkan fitur pendaftaran pada roundcube**
 
@@ -256,9 +256,9 @@ Syntax: `sudo certbort --apache`
 
 Kemudian ikuti apa yang diminta 
 
-![Gambar27]()
+![Gambar27](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/SSL%20mail.PNG)
 
-![Gambar28]()
+![Gambar28](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/SSL%20mail2.PNG)
 
 Menambahkan syntax pada file `roundcube.conf`
 
@@ -335,7 +335,7 @@ Edit seperti dibawah ini:
 
             <Directory /var/lib/roundcube/logs>
 
-![Gambar29]()
+![Gambar29](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/SSL%20mail3.PNG)
 
 ## Hasil Akhir Webserver dan Webmail
 
@@ -343,39 +343,39 @@ Edit seperti dibawah ini:
 
 Kami melakukan beberapa modifikasi pada konfigurasi default wordpress dan php sehingga bisa menggunakan tema / upload tema selain yang disediakan oleh wordpress. Kemudian kami juga melakukan modofikasi pada tampilan sehingga menjadi sedemikian rupa.
 
-![Gambar30]()
+![Gambar30](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/hasil1.PNG)
 
 **2.	Webmail 	: www.webmail.tiga.tujuhlangit.id**
 
 Kami melakukan modifikasi pada interface webmail sehingga menjadi ada fitur daftar untuk membuat akun email. 
 
-![Gambar31]()
+![Gambar31](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/hasil2.PNG)
 
 ### Testing daftar webmail
 
-![Gambar32]()
+![Gambar32](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/hasil3.PNG)
 
 Email address : `bhaktiarc@tiga.tujuhlangit.id`
 
 Password	: Kelompok3
 
-![Gambar33]()
+![Gambar33](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/hasil4.PNG)
 
-![Gambar34]()
+![Gambar34](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/hasil5.PNG)
 
 Login dengan akun yang telah dibuat
 
-![Gambar35]()
+![Gambar35](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/hasil6.PNG)
 
 **Testing mengirim email dan menerima email**
 
-![Gambar36]()
+![Gambar36](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/hasil7.PNG)
 
-![Gambar37]()
+![Gambar37](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/hasil8.PNG)
 
 Mengecek pada email tujuan
 
-![Gambar38]()
+![Gambar38](https://github.com/bhaktiarc/projek-adm-sistem-server/blob/master/img/mail/hasil9.PNG)
 
 
 
